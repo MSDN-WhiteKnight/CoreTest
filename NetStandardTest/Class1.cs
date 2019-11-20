@@ -7,6 +7,6 @@ namespace NetStandardTest
         public static double CalcSum(double x, double y)
         {
             return x + y;
-        }
+        
     }
 }
