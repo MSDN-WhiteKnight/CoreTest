@@ -22,4 +22,4 @@ jobs:
           path: NetCoreTest/bin/Release/
     - name: Run
       run: |        
-        NetCoreTest/bin/Release/NetCoreTest.exe
+        dotnet NetCoreTest/bin/Release/netcoreapp2.1/NetCoreTest.dll
