@@ -15,3 +15,11 @@ jobs:
         dotnet-version: 2.2.108
     - name: Build with dotnet
       run: dotnet build --configuration Release
+    - name: Archive build results
+      uses: actions/upload-artifact@v1
+      with:
+          name: Output
+          path: NetCoreTest/bin/Release/
+    - name: Run
+      run: |        
+        NetCoreTest/bin/Release/NetCoreTest.exe
