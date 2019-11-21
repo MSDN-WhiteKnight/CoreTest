@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using CilBytecodeParser;
 
 namespace NetCoreTest
 {
@@ -6,7 +8,8 @@ namespace NetCoreTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! {0}",NetStandardTest.Class1.CalcSum(1.0,2.0));
+            Console.WriteLine("Hello world");
+            if (!Console.IsInputRedirected) Console.ReadKey();
         }
     }
 }
