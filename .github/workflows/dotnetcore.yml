@@ -11,8 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 2.2.108
     - name: Build with dotnet
       run: dotnet build CoreTest.sln --configuration Release
     - name: Archive build results
@@ -22,4 +20,4 @@ jobs:
           path: NetCoreTest/bin/Release/
     - name: Run
       run: |        
-        dotnet NetCoreTest/bin/Release/netcoreapp2.1/NetCoreTest.dll
+        dotnet NetCoreTest/bin/Release/net6.0/NetCoreTest.dll
