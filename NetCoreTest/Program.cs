@@ -1,13 +1,19 @@
-﻿using System;
+using System;
 
 namespace NetCoreTest
 {
+
+    class C<T>
+    {
+
+    }
+
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            if (!Console.IsInputRedirected) Console.ReadKey();
+            Type t = typeof(C<>).GetGenericArguments()[0];
+            Console.WriteLine(t.IsNested);
         }
     }
 }
